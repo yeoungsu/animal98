@@ -1,0 +1,122 @@
+@charset "utf-8";
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: block;
+}
+.clearfix::after {
+    clear: both;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+body {
+    font: 16px Arial, "맑은 고딕", sans-serif;
+}
+
+#wrap {
+    /* width: 1001px; */
+    margin: 0 auto;
+}
+.top {
+    width: 1001px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.top h1 {
+    color: #666;
+}
+/* top */
+
+
+.menu {
+    position: relative;
+    width: 1001px;
+    height: 400px;
+    margin: 0 auto;
+}
+.nav {
+    /* border: 1px solid; */
+    background: rgb(24, 36, 99);
+}
+.nav ul li {
+    float: left;
+    padding: 30px 35px;
+}
+.nav ul li:nth-of-type(1) {
+    background: red;
+}
+.nav ul li a {
+    color: #fff;
+    font-weight: bold;
+}
+.visual {
+    position: relative;
+    top: -70px;
+    left: 0;
+    height: 360;
+}
+/* menu */
+
+
+.con {
+    width: 1001px;
+    margin: 0 auto 50px;
+}
+.con > div {
+    float: left;
+}
+.left {
+    width: 60%;
+    float: left;
+}
+.left ul li > ul {
+    height: 50%;
+    float: left;
+}
+.left ul li  ul:nth-of-type(1) li {
+    padding: 20px 5px;
+    text-align: center;
+    line-height: 30px;
+}
+.left ul li  ul input {
+    float: right;
+    padding: 2px 5px;
+    background: linear-gradient(#fff, #ccc);
+    border: 1px solid #bbb;
+    border-radius: 2px;
+}
+.left ul li  ul:nth-of-type(2) li {
+    padding: 0 5px;
+    text-align: center;
+    line-height: 30px;
+}
+.right {
+    width: 30%;
+    float: right;
+    margin-left: 100px;
+}
+.right ul li {
+    line-height: 28px;
+    color: rgb(0, 96, 96);
+    font-weight: bold;
+}
+/* con */
+
+
+
+footer {
+    background: #eee;
+}
+footer p {
+    padding: 20px 0;
+    color: #aaa;
+    text-align: center;
+}

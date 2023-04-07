@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: block;
+}
+.clearfix::after {
+    clear: both;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.top {
+    width: 1001px;
+    margin: 0 auto;
+}
+.menu {
+    height: 360px;
+    background: url(../images/bg2.gif);
+}
+.menu ul {
+    width: 1001px;
+    margin: 0 auto;
+    height: 360px;
+    background: url(../images/bg_main.png);
+}
+.menu ul li {
+    float: left;
+}
+.menu ul li a {
+    display: block;
+    color: #fff;
+    line-height: 70px;
+    padding: 0 20px;
+}
+.menu ul li a:hover {
+    background: #f00;
+}
+.menu ul li:first-child a {
+    background: #f00;
+}
+/* menu */
+
+
+.con {
+    width: 1001px;
+    margin: 20px auto;
+}
+.con > div {
+    float: left;
+}
+.con .left {
+    width: 60%;
+}
+.con .left h2 {
+    margin-bottom: 20px;
+}
+.con .left p {
+    width: 90%;
+}
+.con .left input {
+    float: right;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+.con .right {
+    width: 40%;
+}
+.con .right .category {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+footer {
+    height: 100px;
+    background: #ccc;
+}
+footer .foot {
+    width: 1001px;
+    margin: 0 auto;
+}
+footer .foot p {
+    text-align: center;
+    line-height: 100px;
+}

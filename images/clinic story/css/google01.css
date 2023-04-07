@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: block;
+}
+.clearfix::after {
+    clear: both;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+body {
+    font: 16px Arial, "맑은 고딕", "sans-serif";
+}
+#wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    height: 60px;
+    padding: 0 20px;
+}
+header .left {
+    float: left;
+}
+header .right {
+    float: right;
+}
+header ul li {
+    float: left;
+}
+header ul li a {
+    line-height: 60px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+header ul li a:hover {
+    text-decoration: underline;
+}
+header ul.right li:nth-child(3) a {
+    position: relative;
+    display: block;
+    /* border: 1px solid #000; */
+}
+header ul.right li:nth-child(3) a:hover {
+    text-decoration: none;
+}
+header ul.right li:nth-child(3) a span {
+    /* border: 1px solid #000; */
+    display: block;
+    line-height: 60px;
+}
+header ul.right li:nth-child(3) a::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ddd;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0 0s;
+}
+header ul.right li:nth-child(3) a::after {
+    position: absolute;
+    left: -17px;
+    content: "Google 앱";
+    background: #404040;
+    color: #fff;
+    width: 80px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 5px;
+    font-size: 13px;
+    opacity: 0;
+    /* transition: opacity 0s 0.5s; */
+}
+header ul.right li:nth-child(3) a:hover::before,
+header ul.right li:nth-child(3) a:hover::after {
+    opacity: 1;
+}
+header ul.right li:nth-child(3) a:hover::after {
+    transition-delay: 0.5s;
+}
+header ul.right li:nth-child(4) a {
+    padding: 10px 25px;
+    border-radius: 5px;
+    background: #1a73e8;
+    color: #fff;
+}
+header ul.right li:nth-child(4) a:hover {
+    text-decoration: none;
+    background: #1b66c9;
+}
+/* header */
+
+
+section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+section .box {
+    width: 600px;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #e4e4e4;
+    border-radius: 40px;
+    padding: 0 10px;
+}
+section .box input {
+    width: 450px;
+    margin-left: 10px;
+    margin-right: 15px;
+    border: none;
+}
+section .box span {
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+section .box span img {
+    vertical-align: middle;
+}
+:focus {
+    outline: none;
+}
+section .box span:nth-of-type(3) img:first-child {
+    width: 15px;
+}
+section .box span:nth-of-type(4) img:last-child {
+    width: 20px;
+}
+section .box:hover {
+    box-shadow: 0 0 10px #eaeaea;
+}
+section .box .over {
+    position: relative;
+    cursor: pointer;
+}
+section .box .over:hover::before {
+    position: absolute;
+    left: 5px;
+    bottom: -2px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: none;
+    border-bottom: 5px solid #000;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+section .box .over:hover::after {
+    position: absolute;
+    left: -10px;
+    bottom: -32px;
+    background: #000;
+    font-size: 12px;
+    color: #fff;
+    white-space: nowrap;
+    line-height: 30px;
+    padding: 0 10px;
+}
+section .box #key:hover::after {
+    content: "입력 도구";
+}
+section .box #misc:hover::after {
+    content: "음성 검색";
+}
+section .box #camera:hover::after {
+    content: "이미지로 검색";
+}
+
+
+
+section .btn {
+    width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    line-height: 40px;
+}
+section .btn input {
+    margin: 0 5px;
+    display: inline-block;
+    bottom: #f2f2f2;
+    cursor: pointer;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    vertical-align: middle;
+    border: 1px solid transparent;
+}
+section .btn input:hover {
+    border-color: #ccc;
+    box-shadow: 0 0 5px #eaeaea;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #f2f2f2;
+    color: #70757a;
+}
+footer div {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+footer .bottom {
+    border-top: 1px solid #dadce0;
+}
+footer .bottom .left {
+    float: left;
+}
+footer .bottom .right {
+    float: right;
+}
+footer .bottom ul li {
+    float: left;
+}
+footer .bottom ul li a {
+    color: #70757a;
+    padding: 0 10px;
+}
+footer .bottom ul li a:hover {
+    text-decoration: underline;
+}
